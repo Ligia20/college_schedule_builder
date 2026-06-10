@@ -1,3 +1,84 @@
+.calender_container{
+  width: 65%;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family:'Courier New', Courier, monospace
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb (244, 116, 183);
+  overflow: hidden;
+  background-color: rgb(244, 182, 216);
+  margin-left: 200px;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:10px;
+}
+.week_grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background-color: rgb(234, 116, 183);
+  gap: 10px;
+}
+.day_column {
+  background: rgb(239, 135, 135)
+  min-height: 200px;
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+}
+.day_name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.schedule_grid_row {
+  display: grid;
+  grid-template-columns: 70px repeat(7,1fr);
+  
+  border-bottom: 1px solid rgb(238, 133, 150);
+  width: 71%;
+  margin-left: 130px;
+
+}
+.schedule_grid_row:last-child {
+  border-bottom: 1px solid rgb(238, 133, 150);
+}
+.schedule_body {
+  background-color: white;
+  width: 100%;
+}
+.time_label_cell {
+  font-size: 20px;
+  color: #fffefe;
+  text-align: right;
+  padding: 1rem 0.5rem;
+  background: rgb(234, 116, 183);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 8px;
+  
+}
+
+.time_slot_box {
+  min-height: 40px;
+  border-left: 1px solid rgb(238, 133, 150);
+  background: #f8e6e6;
+}
+/*
+.CSBtitle {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--accent);
+  margin-right: 200px;
+  color: rgb(244, 182, 216)
+}
+  */
 .counter {
   font-size: 16px;
   padding: 5px 10px;
