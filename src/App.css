@@ -1,14 +1,14 @@
 .calender_container{
-  width: 65%;
+  width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  font-family:'Courier New', Courier, monospace
+  font-family:'Courier New', Courier, monospace;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgb (244, 116, 183);
   overflow: hidden;
   background-color: rgb(244, 182, 216);
-  margin-left: 200px;
+
 }
 
 .week_grid {
@@ -69,13 +69,16 @@
 }
 .wrapper {
   position: absolute;
+  grid-row: 2;
+  grid-column: 1;
   z-index: 10;
-  background-color: rgba(239, 135, 135, 0.85); /* Added opacity to see through grid */
+  background-color: rgb(239, 135, 135);
+  pointer-events: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px dotted rgb(234, 116, 183);
-  box-sizing: border-box;
+  border: 2px dotted rgb(234, 116, 183)
+  
 }
 /*
 .CSBtitle {
