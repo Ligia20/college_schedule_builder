@@ -1,3 +1,4 @@
+/*
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -29,6 +30,7 @@
     font-size: 16px;
   }
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -109,3 +111,4 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+*/
