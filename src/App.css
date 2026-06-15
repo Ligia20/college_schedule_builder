@@ -4,36 +4,37 @@ html, body, #root {
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
+  background-color: rgb(242, 112, 225);
+  font-family: Arial, sans-serif;
 }
 
 .dashboard_layout {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   gap: 24px;
   padding: 20px;
-  margin: 0 auto;
-  align-items: flex-start;
   width: 100vw;
-  width: 100vh;
-  flex-direction: row; 
-  flex-wrap: nowrap;
-  background-color: rgb(242, 112, 225);
+  height: 100vh;
   box-sizing: border-box;
+  align-items: flex-start;
 }
 
 .sidebar_panel {
-  width: 300px;
+  width: 260px;
+  min-width: 260px;
   background-color: white;
   border: 2px solid rgb(234, 116, 183);
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgb(250, 250, 250);
-  min-width: 300px; 
   box-sizing: border-box;
+  box-shadow: 0 4px 12 rgba(0, 0, 0, 0.15);
 }
 .sidebar_title {
   margin-top: 0;
-  font-family: sans-serif;
-  color: rgb pink
+  color: rgb(234, 116, 183);
+  font-size: 18px;
+  margin-bottom: 15px;
 }
 .course_item {
   padding: 12px;
@@ -56,13 +57,14 @@ html, body, #root {
 
 .calender_container{
   flex: 1;
-  width: 30vw;
-  font-family:'Courier New', Courier, monospace;
-  border: 1px solid #ccc;
+  border: 1px solid #ffffff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgb(244, 116, 183);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background-color: rgb(227, 94, 167);
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 .week_grid, .schedule_grid_row {
@@ -72,11 +74,9 @@ html, body, #root {
 }
 
 .week_grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  background-color: rgb(116, 234, 226);
-  gap: 2px;
-  width: 100%;
+  background-color: rgb(234, 116, 201);
+  border-radius: 6px 6px 0 0;
+  border-bottom: 2px solid rgb(201, 23, 23);
 }
 
 .header_spacer {
@@ -85,12 +85,11 @@ html, body, #root {
 
 .day_column {
   background: rgb(201, 23, 23);
-  min-height: 100px;
   padding: 1rem 0.5rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-left: 1px solid rgb(172, 32, 32, 0.3);
 
 }
 .day_name {
@@ -103,45 +102,43 @@ html, body, #root {
  
 }
 .schedule_body {
-  background-color: white;
+  background-color: rgb(226, 51, 51);
   width: 100%;
+  position: relative;
+
 }
 .schedule_grid_row {
+  border-bottom: 1px solid rgb(238, 133, 150);
+  align-items: stretch;
   display: grid;
-  grid-template-columns: 100px repeat(7, 1fr);
   border-radius: 8px;
   border-bottom: 1px solid rgb(238, 133, 150);
-  gap: 2px;
+  border-top: 1px solid rgb(239, 135, 135);
+  gap: 2px; 
 
 }
 
 
 .time_label_cell {
-  font-size: 30px;
+  font-size: 12px;
   color: #fffefe;
-  text-align: center;
-  padding: 1rem 0.5rem;
   background: rgb(234, 116, 183);
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  border-radius: 8px;
+  justify-content: center;
+  font-weight: bold;
   width: 100%;
+  box-sizing: border-box;
   
 }
 
 .time_slot_box {
-  min-height: 40px;
   border-left: 1px solid rgb(238, 133, 150);
-  background: #f8e6e6;
-  border-radius: 8px;
-  border-right: 1px solid rgb(238, 133, 150);
-  
 }
 
 .course_block {
   position: absolute;
-  background-color: rgba(239, 135, 135, 0.95);
+  background-color: rgb(239, 135, 135);
   border: 2px solid rgb(234, 116, 183);
   border-radius: 6px;
   color: white;
@@ -151,19 +148,16 @@ html, body, #root {
   align-items: center;
   box-sizing: border-box;
   font-size: 12px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 50; 
 }
 
-
-/*
 .CSBtitle {
   font-size: 32px;
   font-weight: bold;
-  color: var(--accent);
-  margin-right: 200px;
-  color: rgb(244, 182, 216)
+
+  color: rgb(239, 224, 232)
 }
-  */
+
 /*
 .counter {
   font-size: 16px;
